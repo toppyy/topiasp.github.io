@@ -1,0 +1,23 @@
+000001 //HERC01Z JOB (BAL),                                                    
+000002 //           CLASS=A,                                                   
+000003 //           MSGCLASS=X                                                 
+000004 //*                                                                     
+000005 //PRIMES  EXEC ASMFCG,PARM.ASM=(OBJ,NODECK),MAC1='SYS2.MACLIB',         
+000006 //             REGION.GO=128K,PARM.GO='/2000'                           
+000007 //ASM.SYSIN DD *                                                        
+000008 PRIMASM  CSECT                                                          
+000009 BEGIN    BASR 6,0                                                       
+000010          USING *,6                                                      
+000011          L   2,NUMBER                                                   
+000012          L   3,=F'100'                                                  
+000013          CR  2,3                                                        
+000014          BC  8,LBLQ                                                     
+000015          XR  15,15                                                      
+000016          BR  14                                                         
+000017 LBLQ     L   15,=F'1'                                                   
+000018          BR  14                                                         
+000019 NUMBER   DC  F'100'                                                     
+000020          END BEGIN                                                      
+000021 /*                                                                      
+000022 //GO.SYSPRINT DD SYSOUT=*                                               
+000023 //                                                                    
