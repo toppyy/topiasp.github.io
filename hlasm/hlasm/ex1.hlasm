@@ -11,12 +11,12 @@ BEGIN    BASR 6,0
          L   2,NUMBER
          L   3,=F'100'
          CR  2,3
-         BC  8,LBLQ
+         BC  7,LBLERR
          XR  15,15
          BR  14
-LBLQ     L   15,=F'1'
+LBLERR   L   15,=F'1'
          BR  14
-NUMBER   DC  F'100'
+NUMBER   DC  F'101'
          END BEGIN
 /*
 //GO.SYSPRINT DD SYSOUT=*

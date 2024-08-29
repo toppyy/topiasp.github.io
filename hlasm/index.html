@@ -106,8 +106,8 @@
                     <p>
                         The program tests whether numbers '101' and '100' are equal.
                         <ul>
-                            <li>If they are equal, the program will exit with a non-zero return code (or in MVS parlance it will "abnormally terminate")</li>
-                            <li>If they are not equal, the program will exit gracefully</li>
+                            <li>If they are not equal, the program will exit with a non-zero return code (or in MVS parlance it will "abnormally terminate")</li>
+                            <li>If they are equal, the program will exit gracefully</li>
                         </ul>
                     </p>
                     <p>Here's the program in all it's glory:</p>
@@ -176,7 +176,7 @@
                         before returning to the caller using BR 14. LBLERR is just a label and can be whatever.
                     </p>
                     <p>
-                        With <span class="code">NUMBER DC F'100'</span> we define a fullword constant with the value 100 and assign the label NUMBER to it (you've seen it used before).
+                        With <span class="code">NUMBER DC F'101'</span> we define a fullword constant with the value 100 and assign the label NUMBER to it (you've seen it used before).
                     </p>
                     <p>
                         And that's all folks. You and I now share a superficial understanding of some HLASM instructions. I'll leave it to you to think what to do with this information.
