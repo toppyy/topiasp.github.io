@@ -11,7 +11,7 @@
             font-family: 'Courier New', Courier, monospace; /* Monospace font */
         }
         .container {
-            width: 80%;
+            width: 60%;
             margin: 0 auto;
             padding: 20px;
             border: 2px solid #000000; /* Black border */
@@ -85,7 +85,8 @@
         <div class="main-content">
             <div class="blog-posts">
                 <div class="blog-post">
-                    <h2>Getting started</h2>
+                    <h1>Getting started with HLASM</h1>
+                    <h2>Setting up the environment</h2>
                     <p>So you've decided to start programming in mainframe assembler and are puzzled on where & how to start. I am also puzzled which is why made these notes.</p>
                     What you'll need
                     <ul>    
@@ -142,6 +143,7 @@
                         Armed with this info the program can execute correctly regardless of it's exact location in memory after loading. It just needs to calculate the effective address of the instructions.
                     </p>
                     <img src="images/screenshot-2-hlasm-ex2.png">
+                    <h2>"Business logic": Comparing integers and branching</h2>
                     <p>Now that addressing gibberish is behind us, let's keep on diggin'. The next instruction is easy-peasy compared to the previous:
                         <span class="code">L 2,NUMBER</span> simply states that we should load a full-word from the address denoted by label "NUMBER" into register 2.
                         In the mainframe world a fullword is 4 bytes or 32 bits. A half-word is 16 bits and a double word is 64 bits (note that it is not a double <i>full</i>word).
